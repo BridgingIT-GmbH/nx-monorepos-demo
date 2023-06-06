@@ -1,0 +1,14 @@
+<div class="w-[960px] pt-16 flex-row flex h-full gap-4 min-h-full">
+  <div aria-description="left" class="sticky w-[180px]">
+    <ul>
+      <li class="font-bold">Neueste Chirps</li>
+      <li># Trends</li>
+    </ul>
+  </div>
+  <div aria-description="content" class="flex-1">
+    <app-chirp *ngFor="let chirp of chirps;" [user]="chirp.user" [message]="chirp.message"></app-chirp>
+  </div>
+  <div aria-description="right" class="w-[180px] overflow-visible">
+    <app-login></app-login>
+  </div>
+</div>

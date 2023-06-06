@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>OOjs_UI_icon_key</title>
+    <g id="Chirper---Home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Large" transform="translate(-1442.750000, -273.384016)" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="Group-4" transform="translate(1135.000000, 154.000000)">
+                <g id="Group-3" transform="translate(136.750000, 74.000000)">
+                    <g id="OOjs_UI_icon_key" transform="translate(180.000000, 54.384016) scale(-1, 1) translate(-180.000000, -54.384016) translate(171.000000, 45.384016)">
+                        <path d="M14,5 C13.1804395,4.97897535 12.5210247,4.31956048 12.5,3.5 C12.5,2.67157288 13.1715729,2 14,2 C14.8284271,2 15.5,2.67157288 15.5,3.5 C15.4789753,4.31956048 14.8195605,4.97897535 14,5 Z M12.5,0 C9.47374814,0.0271429049 7.0271429,2.47374814 7,5.5 C7.03060187,6.47262641 7.26929511,7.42739935 7.7,8.3 L0,16 L0,18 L4,18 L4,16 L6,16 L6,14 L8,14 L11.2,10.8 C11.6244371,10.9153242 12.0605261,10.9824148 12.5,11 C15.5262519,10.9728571 17.9728571,8.52625186 18,5.5 C17.9728571,2.47374814 15.5262519,0.0271429049 12.5,0 L12.5,0 Z" id="Shape"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
