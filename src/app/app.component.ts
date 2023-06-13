@@ -2,7 +2,7 @@ import {Component, inject, Signal} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {RouterOutlet} from '@angular/router';
 import {Store} from '@ngrx/store';
-import {AppState, isLoggedInSelector} from './store/app.state';
+import {AuthState, isLoggedInSelector} from './auth/+store/auth.state';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +12,5 @@ import {AppState, isLoggedInSelector} from './store/app.state';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  store = inject(Store<AppState>);
-  title = 'enterjs';
-  isLoggedIn: Signal<boolean> = this.store.selectSignal(isLoggedInSelector);
+  isLoggedIn: Signal<boolean> = inject(Store<AuthState>).selectSignal(isLoggedInSelector);
 }

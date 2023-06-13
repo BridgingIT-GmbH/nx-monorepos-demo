@@ -13,6 +13,10 @@ export const routes: Routes = [
     component: HomeComponent
   },
   {
+    path: 'trends',
+    component: HomeComponent
+  },
+  {
     path: 'profile',
     component: ProfileComponent
   },

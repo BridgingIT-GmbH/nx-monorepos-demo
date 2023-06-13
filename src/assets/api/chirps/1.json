@@ -1,0 +1,57 @@
+[
+  {
+    "user": {
+      "id": 1,
+      "profilepic": "http://localhost:4200/assets/greg.jpg",
+      "name": "Gregor",
+      "handle": "@GregorSpeck"
+    },
+    "id": 1,
+    "timestamp": "2023-06-13T08:23:07.272Z",
+    "message": "Dieser Post ist ein Beispiel, was wir alles machen können. Mit ganzen 80 Zeichen pro Chirp."
+  },
+  {
+    "user": {
+      "id": 2,
+      "profilepic": "http://localhost:4200/assets/dummy_1.jpg",
+      "name": "Marko",
+      "handle": "@PizzaFindIchGut"
+    },
+    "id": 2,
+    "timestamp": "2023-06-13T08:15:41.272Z",
+    "message": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores "
+  },
+  {
+    "user": {
+      "id": 4,
+      "profilepic": "http://localhost:4200/assets/jochen.jpg",
+      "name": "Jochen",
+      "handle": "@JochenKraushaar"
+    },
+    "id": 4,
+    "timestamp": "2023-06-13T08:13:18.272Z",
+    "message": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores "
+  },
+  {
+    "user": {
+      "id": 1,
+      "profilepic": "http://localhost:4200/assets/greg.jpg",
+      "name": "Gregor",
+      "handle": "@GregorSpeck"
+    },
+    "id": 6,
+    "timestamp": "2023-06-13T08:03:18.272Z",
+    "message": "Heute läuft mal wieder alles schief bei den DevOps kollegen. Wer hilft?"
+  },
+  {
+    "user": {
+      "id": 5,
+      "profilepic": "http://localhost:4200/assets/jochen.jpg",
+      "name": "Jochen",
+      "handle": "@JochenKraushaar"
+    },
+    "id": 7,
+    "timestamp": "2023-06-13T07:54:08.272Z",
+    "message": "Website ist online - Hallo Welt!"
+  }
+]

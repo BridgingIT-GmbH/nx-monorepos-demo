@@ -1,8 +1,8 @@
 import {Component, inject} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {Store} from '@ngrx/store';
-import {AppState} from '../store/app.state';
-import * as AppActions from '../store/app.actions';
+import * as AuthActions from '../+store/auth.actions';
+import {AuthState} from '../+store/auth.state';
 
 @Component({
   selector: 'app-login',
@@ -19,7 +19,7 @@ import * as AppActions from '../store/app.actions';
             <input placeholder="Passwort" class="rounded-lg p-2 text-xs h-8 border-sky-300 border bg-sky-100"
                    type="password"/>
             <button class="rounded-lg bg-sky-700 h-8 w-8 flex items-center justify-center" (click)="login()">
-              <img src="/assets/key.svg"></button>
+              <img alt="key" src="/assets/key.svg"></button>
           </div>
           <div class="self-end pt-5 text-slate-800 text-xs">Nicht du? <a class="text-sky-700 underline">Account
             wechseln</a></div>
@@ -30,9 +30,9 @@ import * as AppActions from '../store/app.actions';
 })
 export class LoginComponent {
 
-  store = inject(Store<AppState>);
+  store = inject(Store<AuthState>);
 
   login() {
-    this.store.dispatch(AppActions.login({user: 'Gregor'}));
+    this.store.dispatch(AuthActions.login({user: 'Gregor'}));
   }
 }
