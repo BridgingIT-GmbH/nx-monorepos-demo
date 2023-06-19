@@ -76,14 +76,17 @@
       }
     },
     "test": {
-      "executor": "@angular-devkit/build-angular:karma",
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "polyfills": ["zone.js", "zone.js/testing"],
-        "tsConfig": "apps/enterjs/tsconfig.spec.json",
-        "inlineStyleLanguage": "scss",
-        "assets": ["apps/enterjs/src/favicon.ico", "apps/enterjs/src/assets"],
-        "styles": ["apps/enterjs/src/styles.scss"],
-        "scripts": []
+        "jestConfig": "apps/enterjs/jest.config.ts",
+        "passWithNoTests": true
+      },
+      "configurations": {
+        "ci": {
+          "ci": true,
+          "codeCoverage": true
+        }
       }
     }
   }
