@@ -4,6 +4,8 @@ import {ProfileComponent} from './profile.component';
 import {provideStore} from '@ngrx/store';
 import {provideRouter} from '@angular/router';
 import {signal} from '@angular/core';
+import {chirpFeatureKey} from '../chirp';
+import {provideMockStore} from '@ngrx/store/testing';
 
 describe('ProfileComponent', () => {
   let component: ProfileComponent;
@@ -14,7 +16,14 @@ describe('ProfileComponent', () => {
       imports: [ProfileComponent],
       providers: [
         provideStore(),
-        provideRouter([])
+        provideMockStore({
+          initialState: {
+            [chirpFeatureKey]: {
+              chirps: []
+            }
+          }
+        }),
+        provideRouter([]),
 
       ]
     });
