@@ -27,6 +27,17 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
 ## Migrate to NX Workspace
-```
-npx ng add @nrwl/angular
-``` 
+
+1. Nx migration schematic
+   ```
+   npx ng add @nrwl/angular
+  
+   ```
+2. Install framework specific tools
+   ```
+   npm i -g @nrwl/angular
+   ```
+3. Tailwind migration
+   ```
+   nx g @nx/angular:setup-tailwind --project=enterjs
+   ```

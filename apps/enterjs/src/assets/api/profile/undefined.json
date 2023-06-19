@@ -1,0 +1,13 @@
+{
+  "id": 1,
+  "profilepic": "http://localhost:4200/assets/greg.jpg",
+  "bannerpic": "https://images.pexels.com/photos/1921326/pexels-photo-1921326.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+  "name": "Gregor",
+  "handle": "@GregorSpeck",
+  "follower": [2, 3, 4, 5],
+  "following": [2, 5],
+  "likes": [2, 6],
+  "profiletext": "Dies ist ein Profiltext, garniert mit infos, die niemand je lesen möchte. Dieser text sagt nichts aus. Frei nach jemandem dessen namen ich vergessen habe.",
+  "url": "https://www.bridging-it.de",
+  "joindate": 1684469937109
+}
