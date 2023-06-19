@@ -8,7 +8,7 @@ describe('ProfileHeaderComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [ProfileHeaderComponent],
+      imports: [ProfileHeaderComponent]
     });
     fixture = TestBed.createComponent(ProfileHeaderComponent);
     component = fixture.componentInstance;
