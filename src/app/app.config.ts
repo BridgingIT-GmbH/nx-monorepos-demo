@@ -1,15 +1,15 @@
-import {ApplicationConfig, importProvidersFrom, isDevMode} from '@angular/core';
-import { provideRouter } from '@angular/router';
+import {ApplicationConfig, isDevMode} from '@angular/core';
+import {provideRouter} from '@angular/router';
 
-import { routes } from './app.routes';
-import { provideStore } from '@ngrx/store';
+import {routes} from './app.routes';
+import {provideStore} from '@ngrx/store';
 
 import {provideStoreDevtools} from '@ngrx/store-devtools';
 import {metaReducers, reducers} from './reducers';
 import * as AuthEffects from './auth/+store/auth.effects';
 import {provideEffects} from '@ngrx/effects';
 import {ChirpEffects} from './chirp/+store/chirp.effects';
-import {HttpClientModule} from '@angular/common/http';
+import {provideHttpClient} from '@angular/common/http';
 import {ProfileEffects} from './profile/+store/profile.effects';
 
 export const appConfig: ApplicationConfig = {
@@ -17,7 +17,7 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes),
     provideStore(reducers, {metaReducers}),
     provideEffects([AuthEffects, ChirpEffects, ProfileEffects]),
-    importProvidersFrom(HttpClientModule),
+    provideHttpClient(),
     provideStoreDevtools({
       maxAge: 25, // Retains last 25 states
       logOnly: !isDevMode(), // Restrict extension to log-only mode
