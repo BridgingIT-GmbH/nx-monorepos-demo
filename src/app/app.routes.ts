@@ -1,6 +1,6 @@
 import {Routes} from '@angular/router';
-import {HomeComponent} from './home/home.component';
-import {ProfileComponent} from './profile/profile.component';
+import {HomeComponent} from './home';
+import {ProfileComponent,profileResolver, profileGuard} from './profile';
 
 export const routes: Routes = [
   {
@@ -18,6 +18,19 @@ export const routes: Routes = [
   },
   {
     path: 'profile',
+    component: ProfileComponent,
+    resolve: {profile: profileResolver},
+    canActivate: [profileGuard]
+  },
+  {
+    path: 'profile/:id',
+    resolve: {profile: profileResolver},
     component: ProfileComponent
   },
+  {
+    path: '**',
+    pathMatch: 'full',
+    redirectTo: 'home'
+  },
+
 ];

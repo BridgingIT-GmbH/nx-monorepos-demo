@@ -1,8 +1,7 @@
 import {Component, inject} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {Store} from '@ngrx/store';
-import * as AuthActions from '../+store/auth.actions';
-import {AuthState} from '../+store/auth.state';
+import {AuthState, AuthActions} from '../+store';
 
 @Component({
   selector: 'app-login',

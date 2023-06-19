@@ -16,11 +16,13 @@ export const reducer = createReducer(
   initState,
   on(ChirpActions.loadChirpsSuccess, (state, {chirps}) => ({...state, chirps})),
   on(ChirpActions.addChirp, (state, {chirp}) => {
-    const chirps = state.chirps;
+    const chirps = [...state.chirps];
     chirps.unshift(chirp);
     return ({...state, chirps})
   })
 );
+
+export const chirpReducer = reducer;
 
 export const selector = createFeatureSelector<ChirpState>('chirp');
 

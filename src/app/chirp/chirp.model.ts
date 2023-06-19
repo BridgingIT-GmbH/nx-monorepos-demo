@@ -1,10 +1,9 @@
-import {User} from '../user/user.model';
+import {User} from '../user';
 
-export interface ChirpInfo {
-  id: number;
-}
+export type ChirpId = number;
 
-export interface Chirp extends ChirpInfo {
+export interface Chirp {
+  id: ChirpId;
   user: User;
   message: string;
   timestamp: Date;

@@ -1,0 +1,13 @@
+{
+  "id": 5,
+  "profilepic": "http://localhost:4200/assets/dummy_3.jpg",
+  "bannerpic": "https://images.pexels.com/photos/1921326/pexels-photo-1921326.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+  "name": "Fatme",
+  "handle": "@code4life",
+  "follower": [1,4,5],
+  "following": [1,5],
+  "likes": [1,2,6],
+  "profiletext": "Frontend, Backend, Beutelsend... hauptsache Schluss!",
+  "url": "https://letmegooglethat.com/",
+  "joindate": 1685420561916
+}

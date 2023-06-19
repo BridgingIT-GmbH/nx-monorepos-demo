@@ -8,7 +8,7 @@ export const login = createEffect(
     return inject(Actions).pipe(
       ofType(AuthActions.login),
       map(({user}) => {
-        return AuthActions.loginSuccess({user})
+        return AuthActions.loginSuccess({userId: 1, user})
       })
     );
   },

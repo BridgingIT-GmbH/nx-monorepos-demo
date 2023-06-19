@@ -1,20 +1,21 @@
 import {isDevMode} from '@angular/core';
 import {ActionReducer, ActionReducerMap, MetaReducer} from '@ngrx/store';
-import * as AuthState from '../auth/+store/auth.state';
-import * as ChirpState from '../chirp/+store/chirp.state';
-import {authFeatureKey} from '../auth/+store/auth.state';
-import {chirpFeatureKey} from '../chirp/+store/chirp.state';
+import {authFeatureKey, authReducer, AuthState} from '../auth';
+import {chirpFeatureKey, chirpReducer, ChirpState} from '../chirp';
+import {profileFeatureKey, profileReducer, ProfileState} from '../profile';
 
 export const appFeatureKey = 'app';
 
 export interface State {
-  [authFeatureKey]: AuthState.AuthState
-  [chirpFeatureKey]: ChirpState.ChirpState
+  [authFeatureKey]: AuthState
+  [chirpFeatureKey]: ChirpState,
+  [profileFeatureKey]: ProfileState
 }
 
 export const reducers: ActionReducerMap<State> = {
-  [authFeatureKey]: AuthState.reducer,
-  [chirpFeatureKey]: ChirpState.reducer
+  [authFeatureKey]: authReducer,
+  [chirpFeatureKey]: chirpReducer,
+  [profileFeatureKey]: profileReducer
 };
 
 export function debug(reducer: ActionReducer<any>): ActionReducer<any> {

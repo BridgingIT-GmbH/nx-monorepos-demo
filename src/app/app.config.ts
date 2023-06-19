@@ -10,12 +10,13 @@ import * as AuthEffects from './auth/+store/auth.effects';
 import {provideEffects} from '@ngrx/effects';
 import {ChirpEffects} from './chirp/+store/chirp.effects';
 import {HttpClientModule} from '@angular/common/http';
+import {ProfileEffects} from './profile/+store/profile.effects';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideRouter(routes),
     provideStore(reducers, {metaReducers}),
-    provideEffects([AuthEffects, ChirpEffects]),
+    provideEffects([AuthEffects, ChirpEffects, ProfileEffects]),
     importProvidersFrom(HttpClientModule),
     provideStoreDevtools({
       maxAge: 25, // Retains last 25 states

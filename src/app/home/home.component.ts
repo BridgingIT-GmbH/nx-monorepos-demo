@@ -1,21 +1,32 @@
 import {Component, inject, OnInit} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {ChirpComponent} from '../chirp/chirp.component';
-import {Chirp} from '../chirp/chirp.model';
-import {SidenavComponent} from './sidenav/sidenav.component';
-import {AddidtionalAreaComponent} from './additionalarea/addidtional-area.component';
 import {Store} from '@ngrx/store';
-import {AuthState, isLoggedInSelector} from '../auth/+store/auth.state';
+import {AuthState, isLoggedInSelector, LoginComponent} from '../auth';
 import {FormControl, ReactiveFormsModule} from '@angular/forms';
-import {chirpSelector, ChirpState} from '../chirp/+store/chirp.state';
-import * as ChirpActions from '../chirp/+store/chirp.actions';
+import {Chirp, ChirpActions, ChirpComponent, chirpSelector, ChirpState} from '../chirp';
+import {ProfileHeaderComponent} from '../profile/profile-header/profile-header.component';
+import {ContentComponent, FrameComponent, SidebarComponent, SidenavComponent} from '../shared';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, ChirpComponent, SidenavComponent, AddidtionalAreaComponent, ReactiveFormsModule],
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  imports: [CommonModule, ChirpComponent, SidenavComponent, ReactiveFormsModule, LoginComponent, ContentComponent, FrameComponent, ProfileHeaderComponent, SidebarComponent],
+  template: `
+    <app-frame [isLoggedIn]="isLoggedIn">
+      <app-frame-content>
+        <div *ngIf="isLoggedIn()" class="ext-slate-800 p-5 flex rounded-lg border-slate-200 gap-5 border mb-5">
+          <img [alt]="'Gregor'" class="w-14 h-14 rounded-full border-sky-700 border-2" src="/assets/greg.jpg">
+          <div class="flex-1 flex flex-col items-end justify-end">
+            <textarea [formControl]="chirpInput" class="w-full" placeholder="Was gibts neues...?"></textarea>
+            <button class="rounded-lg bg-sky-700 h-8 flex items-center justify-center text-white mt-3 px-4 py-1"
+                    (click)="addChirp()">Chirp it
+            </button>
+          </div>
+        </div>
+        <app-chirp *ngFor="let chirp of chirps();" [user]="chirp.user" [message]="chirp.message"
+                   [timestamp]="chirp.timestamp"></app-chirp>
+      </app-frame-content>
+    </app-frame>`
 })
 export class HomeComponent implements OnInit {
   chirpStore = inject(Store<ChirpState>);
@@ -33,8 +44,6 @@ export class HomeComponent implements OnInit {
   }
 
   addChirp() {
-
-    console.log(this.chirpValid(), this.chirpInput.value);
     if (this.chirpValid()) {
       const chirp: Chirp = {
         user: {
@@ -47,9 +56,8 @@ export class HomeComponent implements OnInit {
         timestamp: new Date(),
         message: this.chirpInput.value as string
       }
-      inject(Store<ChirpState>).dispatch(ChirpActions.addChirp({chirp}));
+      this.chirpStore.dispatch(ChirpActions.addChirp({chirp}));
 
-      console.log(this.chirps);
       this.chirpInput.setValue(null);
     }
 

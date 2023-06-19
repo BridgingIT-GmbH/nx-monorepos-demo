@@ -1,7 +1,13 @@
-import {ChirpInfo} from '../chirp/chirp.model';
-import {User} from '../user/user.model';
+import {User} from '../user';
 
+export type UserId = number;
+export type ChirpId = number
 export interface UserProfile extends User {
-  follower: User[];
-  likes: ChirpInfo[];
+  bannerpic: string;
+  follower: UserId[];
+  following: UserId[];
+  likes: ChirpId[];
+  url: string;
+  profiletext: string;
+  joindate: string;
 }

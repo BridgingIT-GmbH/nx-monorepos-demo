@@ -2,12 +2,11 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-timeline',
+  selector: 'app-frame-content',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './timeline.component.html',
-  styleUrls: ['./timeline.component.scss']
+  template: `<ng-content></ng-content>`
 })
-export class TimelineComponent {
+export class ContentComponent {
 
 }
