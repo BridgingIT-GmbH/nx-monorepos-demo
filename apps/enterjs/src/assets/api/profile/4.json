@@ -1,0 +1,13 @@
+{
+  "id": 4,
+  "profilepic": "http://localhost:4200/assets/jochen.jpg",
+  "bannerpic": "https://images.unsplash.com/photo-1496664444929-8c75efb9546f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2370&q=80",
+  "name": "Jochen",
+  "handle": "@JochenKraushaar",
+  "follower": [2, 3, 4, 5],
+  "following": [2, 5],
+  "likes": [2, 6],
+  "profiletext": "Dies ist ein Profiltext, garniert mit infos, die niemand je lesen möchte. Dieser text sagt nichts aus. Frei nach jemandem dessen namen ich vergessen habe.",
+  "url": "https://www.bridging-it.de",
+  "joindate": 1684469937109
+}

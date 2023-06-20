@@ -1,0 +1,22 @@
+<div class="flex flex-col h-screen justify-between">
+  <div class="sticky top-0 pl-5 pt-5 h-[56px] flex flex-row items-center">
+    <img src="/assets/chirper_logo_small.svg" />
+    <h1 class="text-sky-700 pl-5 text-2xl">Chirper</h1>
+  </div>
+  <main class="flex-1">
+    <div class="flex flex-row justify-center">
+      <router-outlet></router-outlet>
+    </div>
+  </main>
+  <footer
+    *ngIf="!isLoggedIn()"
+    class="bg-cyan-400 text-white sticky bottom-0 left-0 w-full h-16 min-h-16 flex flex-row justify-center items-center"
+  >
+    <div class="w-[960px] flex flex-row items-center justify-between">
+      <div>Lass dir nichts entgehen und werde teil unserer Community</div>
+      <div class="flex flex-row gap-4 my-3">
+        <a class="bg-sky-700 rounded-md px-4 py-1">Jetzt Registrieren</a>
+      </div>
+    </div>
+  </footer>
+</div>

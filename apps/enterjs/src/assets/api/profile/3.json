@@ -1,0 +1,13 @@
+{
+  "id": 3,
+  "profilepic": "http://localhost:4200/assets/dummy_2.jpg",
+  "bannerpic": "https://images.pexels.com/photos/3601425/pexels-photo-3601425.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+  "name": "Steffi",
+  "handle": "@rapt0r",
+  "follower": [1, 4, 5],
+  "following": [1, 5],
+  "likes": [1, 2, 6],
+  "profiletext": "Urlaub ist für mich das wichtigste.",
+  "url": "https://www.urlaubftw.de",
+  "joindate": 1685420561916
+}
