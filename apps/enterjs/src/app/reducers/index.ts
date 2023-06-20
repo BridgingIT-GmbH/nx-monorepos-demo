@@ -1,8 +1,8 @@
 import { isDevMode } from '@angular/core';
 import { ActionReducer, ActionReducerMap, MetaReducer } from '@ngrx/store';
-import { authFeatureKey, authReducer, AuthState } from '../auth';
-import { chirpFeatureKey, chirpReducer, ChirpState } from '../chirp';
-import { profileFeatureKey, profileReducer, ProfileState } from '../profile';
+import { authFeatureKey, authReducer, AuthState } from '@chirper/auth';
+import { chirpFeatureKey, chirpReducer, ChirpState } from '@chirper/chirp';
+import { profileFeatureKey, profileReducer, ProfileState } from '@chirper/profile';
 
 export const appFeatureKey = 'app';
 

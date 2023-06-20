@@ -10,11 +10,11 @@ import { provideStore } from '@ngrx/store';
 
 import { provideStoreDevtools } from '@ngrx/store-devtools';
 import { metaReducers, reducers } from './reducers';
-import * as AuthEffects from './auth/+store/auth.effects';
+import { AuthEffects } from '@chirper/auth';
 import { provideEffects } from '@ngrx/effects';
-import { ChirpEffects } from './chirp/+store/chirp.effects';
 import { HttpClientModule } from '@angular/common/http';
-import { ProfileEffects } from './profile/+store/profile.effects';
+import { ChirpEffects } from '@chirper/chirp';
+import { ProfileEffects } from '@chirper/profile';
 
 export const appConfig: ApplicationConfig = {
   providers: [

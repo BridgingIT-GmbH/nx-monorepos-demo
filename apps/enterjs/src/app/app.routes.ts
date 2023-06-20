@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './home';
-import { ProfileComponent, profileResolver, profileGuard } from './profile';
+import { HomeComponent } from '@chirper/home';
+import { ProfileComponent, profileResolver, profileGuard } from '@chirper/profile';
 
 export const routes: Routes = [
   {

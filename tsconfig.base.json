@@ -19,7 +19,14 @@
     "module": "ES2022",
     "useDefineForClassFields": false,
     "lib": ["ES2022", "dom"],
-    "paths": {},
+    "paths": {
+      "@chirper/auth": ["libs/chirper/auth/src/index.ts"],
+      "@chirper/chirp": ["libs/chirper/chirp/src/index.ts"],
+      "@chirper/home": ["libs/chirper/home/src/index.ts"],
+      "@chirper/profile": ["libs/chirper/profile/src/index.ts"],
+      "@chirper/shared": ["libs/chirper/shared/src/index.ts"],
+      "@chirper/user": ["libs/chirper/user/src/index.ts"]
+    },
     "rootDir": "."
   },
   "angularCompilerOptions": {

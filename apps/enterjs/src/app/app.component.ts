@@ -2,7 +2,7 @@ import {Component, inject, Signal} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {RouterOutlet} from '@angular/router';
 import {Store} from '@ngrx/store';
-import {AuthState, isLoggedInSelector} from './auth';
+import {AuthState, isLoggedInSelector} from '@chirper/auth';
 
 @Component({
   selector: 'app-root',
