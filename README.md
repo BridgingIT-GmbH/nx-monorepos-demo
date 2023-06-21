@@ -111,7 +111,7 @@ libName="auth" ;
 libPath="apps/enterjs/src/app/$libName";
 nx g @nx/angular:library chirper/$libName --standalone --tags=feature --importPath=@chirper/$libName && \
 rm -rf libs/chirper/$libName/src/lib/chirper-$libName && \
-mv $libPath/*  libs/chirper/$libName/src/lib/ && && rm -rf $libPath \
+mv $libPath/*  libs/chirper/$libName/src/lib/ && rm -rf $libPath && \
 echo "export * from \"./lib\"" > libs/chirper/$libName/src/index.ts;
 ```
 
