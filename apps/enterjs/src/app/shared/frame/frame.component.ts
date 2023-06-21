@@ -1,19 +1,13 @@
-import { Component, Input, Signal } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { ChirpComponent } from '../../chirp';
-import { LoginComponent } from '../../auth';
-import { ProfileHeaderComponent } from '../../profile/profile-header/profile-header.component';
-import { SidenavComponent } from '../sidenav/sidenav.component';
-import { SidebarComponent } from '../sidebar/sidebar.component';
+import {Component, Input, Signal} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {SidenavComponent} from '../sidenav/sidenav.component';
+import {SidebarComponent} from '../sidebar/sidebar.component';
 
 @Component({
   selector: 'app-frame',
   standalone: true,
   imports: [
     CommonModule,
-    ChirpComponent,
-    LoginComponent,
-    ProfileHeaderComponent,
     SidenavComponent,
     SidebarComponent,
   ],
@@ -33,6 +27,6 @@ import { SidebarComponent } from '../sidebar/sidebar.component';
   styles: [],
 })
 export class FrameComponent {
-  @Input({ required: true })
+  @Input({required: true})
   isLoggedIn!: Signal<boolean>;
 }
