@@ -1,11 +1,11 @@
-import {ComponentFixture, TestBed} from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import {ProfileComponent} from './profile.component';
-import {provideStore} from '@ngrx/store';
-import {provideRouter} from '@angular/router';
-import {signal} from '@angular/core';
-import {chirpFeatureKey} from '../chirp';
-import {provideMockStore} from '@ngrx/store/testing';
+import { ProfileComponent } from './profile.component';
+import { provideStore } from '@ngrx/store';
+import { provideRouter } from '@angular/router';
+import { signal } from '@angular/core';
+import { chirpFeatureKey } from '@chirper/chirp';
+import { provideMockStore } from '@ngrx/store/testing';
 
 describe('ProfileComponent', () => {
   let component: ProfileComponent;
@@ -23,7 +23,7 @@ describe('ProfileComponent', () => {
             }
           }
         }),
-        provideRouter([]),
+        provideRouter([])
 
       ]
     });
