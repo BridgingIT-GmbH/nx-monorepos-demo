@@ -1,0 +1,31 @@
+name: Mirror to github.com
+
+on:
+  push:
+    branches: ['**']
+  delete:
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout (bare clone)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: GitHub App Token generieren
+        id: app-token
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: ${{ secrets.MIRROR_APP_ID }}
+          private-key: ${{ secrets.MIRROR_APP_PRIVATE_KEY }}
+          owner: BridgingIT-GmbH
+
+      - name: Mirror push to github.com
+        env:
+          TOKEN: ${{ steps.app-token.outputs.token }}
+        run: |
+          git remote add mirror \
+            "https://x-access-token:${TOKEN}@github.com/BridgingIT-GmbH/nx-monorepos-demo.git"
+          git push mirror --mirror
