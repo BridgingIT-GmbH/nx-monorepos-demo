@@ -20,7 +20,7 @@ jobs:
         with:
           app-id: ${{ secrets.MIRROR_APP_ID }}
           private-key: ${{ secrets.MIRROR_APP_PRIVATE_KEY }}
-          installation-id: ${{ secrets.MIRROR_APP_INSTALLATION_ID }}
+          repositories: nx-monorepos-demo
           github-api-url: https://api.github.com
           owner: BridgingIT-GmbH
 
